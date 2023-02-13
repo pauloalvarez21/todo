@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, SafeAreaView} from 'react-native';
 import Button from '../component/Button';
 import BluetoothFlatlist from '../component/BluetoothFlatlist';
 
@@ -7,9 +7,9 @@ const Bluetooth = ({navigation}) => {
     
   
   return (
-    <View>
+    <SafeAreaView>
       <BluetoothFlatlist/>
-      </View>
+      </SafeAreaView>
   );
 };
 

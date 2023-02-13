@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Menu from './src/view/Menu';
 import Bluetooth from "./src/view/Bluetooth";
+import Ocr from "./src/view/Ocr";
 
 const Stack = createNativeStackNavigator();
 
@@ -24,6 +25,7 @@ const App = () => {
         }}>
         <Stack.Screen name='Menu' component={Menu} />
         <Stack.Screen name='Bluetooth' component={Bluetooth} />
+        <Stack.Screen name='Ocr' component={Ocr}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
