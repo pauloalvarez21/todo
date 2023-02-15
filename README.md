@@ -10,7 +10,7 @@
 ## Puesta en marcha
 
 1. Con este comando se pone a correr la variante de google
-    npx react-native run-android --variant=GmsDebug
+    `npx react-native run-android --variant=GmsDebug`
 
 2.  Con este comando se pone a correr la variante de Huawei
-    npx react-native run-android --variant=HmsDebug
+    `npx react-native run-android --variant=HmsDebug`
