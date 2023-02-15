@@ -1,5 +1,6 @@
 apply plugin: "com.android.application"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services'
 
 import com.android.build.OutputFile
 
@@ -129,6 +130,16 @@ android {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
+
+        flavorDimensions "version"
+        productFlavors{
+            gms{
+                dimension "version"
+            }
+            hms{
+                dimension "version"
+            }
+        }
     }
 
     // applicationVariants are e.g. debug, release
@@ -149,6 +160,8 @@ android {
 }
 
 dependencies {
+    gmsImplementation platform('com.google.firebase:firebase-bom:31.2.1')
+    gmsImplementation 'com.google.firebase:firebase-analytics-ktx'
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
